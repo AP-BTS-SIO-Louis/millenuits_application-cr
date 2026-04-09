@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS utilisateur (
     mot_de_passe VARCHAR(128) NOT NULL -- SHA-512 génère une chaîne de 128 caractères
 );
 
--- Insertion de l'utilisateur de test (Login: admin / Mot de passe: test1234)
--- Le mot de passe inséré correspond au hachage SHA-512 de "test1234"
+-- Insertion de l'utilisateur de test (Login: admin / Mot de passe: admin)
+-- Le mot de passe inséré correspond au hachage SHA-512 de "admin"
 INSERT INTO utilisateur (identifiant, mot_de_passe) 
 VALUES ('admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec');
 
