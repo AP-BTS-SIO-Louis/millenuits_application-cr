@@ -1,0 +1,60 @@
+<div class="container">
+    <div id="carouselMillenuits" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselMillenuits" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselMillenuits" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselMillenuits" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselMillenuits" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselMillenuits" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/image1.jpg" class="d-block w-100" alt="image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/image2.jpg" class="d-block w-100" alt="image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/image3.jpg" class="d-block w-100" alt="image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/image4.jpg" class="d-block w-100" alt="image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/image5.jpg" class="d-block w-100" alt="image 5">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMillenuits" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMillenuits" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Bienvenue sur l'application MILLENUITS_CR</h1>
+        </div>
+    </div>
+    <?php
+    if (isset($_SESSION['identifiant'])) {
+        ?>
+
+
+        <div>
+            <h3 class='text-center'>Bienvenue vous êtes connecté <?php echo $_SESSION['identifiant'] ?> !</h3>
+        </div>
+        <?php
+    } else {
+        ?>
+
+        <div>
+            <h3 class="text-center">Vous devez vous connecter pour accéder à l'application.</h3>
+        </div>
+    <?php }
+    ?>
+
+
+</div>
