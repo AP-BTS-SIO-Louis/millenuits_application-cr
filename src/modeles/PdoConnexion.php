@@ -13,7 +13,7 @@
  */
 class PdoConnexion {
 
-    private static $strServeur = 'mysql:host=localhost';
+    private static $strServeur = 'mysql:host=db';
     private static $strBdd = 'dbname=bd_millenuits';
     private static $strUser = 'root';
     private static $strMdp = '';
