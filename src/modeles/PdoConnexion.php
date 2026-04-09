@@ -15,8 +15,8 @@ class PdoConnexion {
 
     private static $strServeur = 'mysql:host=db';
     private static $strBdd = 'dbname=bd_millenuits';
-    private static $strUser = 'root';
-    private static $strMdp = 'root_password_fort';
+    private static $strUser = 'user_etudiant';
+    private static $strMdp = 'mdp_etudiant';
     private static $objPdo;
     private static $objPdoConnexion = null;
 

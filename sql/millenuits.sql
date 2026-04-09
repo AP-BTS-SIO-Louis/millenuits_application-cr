@@ -1,6 +1,6 @@
 -- Création de la base de données
-CREATE DATABASE IF NOT EXISTS db_etudiant;
-USE db_etudiant;
+CREATE DATABASE IF NOT EXISTS bd_millenuits;
+USE bd_millenuits;
 
 -- 1. Table Utilisateur (Authentification)
 CREATE TABLE IF NOT EXISTS utilisateur (
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS utilisateur (
 -- Insertion de l'utilisateur de test (Login: admin / Mot de passe: test1234)
 -- Le mot de passe inséré correspond au hachage SHA-512 de "test1234"
 INSERT INTO utilisateur (identifiant, mot_de_passe) 
-VALUES ('admin', '11116c4e12c19e7a469bb759168b9415c4de5b94f387ff388e3dbf7df5dc481358a9840e791eafad6b4c3efdd0e2418e24dc5c4b14d2eab8fce5bb0a221f0679');
+VALUES ('admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec');
 
 -- 2. Table Distributeur
 CREATE TABLE IF NOT EXISTS distributeur (
