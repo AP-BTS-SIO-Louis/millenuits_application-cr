@@ -12,14 +12,14 @@ services:
     command: >
       sh -c "apk add --no-cache git 
       && git clone https://github.com/AP-BTS-SIO-Louis/millenuits_application-cr.git /tmp/repo
-      && mkdir -p /app/web /app/sql
-      && rm -rf /app/web/* && rm -rf /app/sql/*
-      && cp -r /tmp/repo/src/* /app/web/ 
-      && cp /tmp/repo/sql/*.sql /app/sql/ 
-      && chown -R 33:33 /app/web"
+      && mkdir -p /app /app/sql
+      && rm -rf /app/* && rm -rf /sql_init/*
+      && cp -r /tmp/repo/src/* /app/ 
+      && cp /tmp/repo/sql/*.sql /sql_init/
+      && chown -R 33:33 /app"
     volumes:
       - web_data:/app
-      - db_init:/app/sql
+      - db_init:/sql_init
 
   # 2. Serveur Web (Éxecution du code PHP)
   web:
