@@ -33,7 +33,7 @@ services:
       - DB_HOST=db
       - DB_USER=${DB_USER:-user_etudiant}
       - DB_PASSWORD=${DB_PASSWORD:-mdp_etudiant}
-      - DB_NAME=${DB_NAME:-db_etudiant}
+      - DB_NAME=${DB_NAME:-db_millenuits}
     depends_on:
       init-code:
         condition: service_completed_successfully
@@ -46,7 +46,7 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password_fort}
-      MYSQL_DATABASE: ${DB_NAME:-db_etudiant}
+      MYSQL_DATABASE: ${DB_NAME:-db_millenuits}
       MYSQL_USER: ${DB_USER:-user_etudiant}
       MYSQL_PASSWORD: ${DB_PASSWORD:-mdp_etudiant}
     volumes:

@@ -1,6 +1,6 @@
 -- Création de la base de données
-CREATE DATABASE IF NOT EXISTS bd_millenuits;
-USE bd_millenuits;
+CREATE DATABASE IF NOT EXISTS db_millenuits;
+USE db_millenuits;
 
 -- 1. Table Utilisateur (Authentification)
 CREATE TABLE IF NOT EXISTS utilisateur (
