@@ -10,9 +10,9 @@ services:
   init-code:
     image: alpine:latest
     command: >
-      sh -c "apk add --no-cache git 
-      && git clone https://github.com/AP-BTS-SIO-Louis/millenuits_application-cr.git /tmp/repo
-      && mkdir -p /app /app/sql
+      sh -c "wget http://gitea.millenuits.lan:3000/Millenuits/application-cr/archive/main.tar.gz -O /tmp/repo.tar.gz
+      && mkdir -p /tmp/repo /app /app/sql
+      && tar -xzf /tmp/repo.tar.gz -C /tmp/repo --strip-components=1
       && rm -rf /app/* && rm -rf /sql_init/*
       && cp -r /tmp/repo/src/* /app/ 
       && cp /tmp/repo/sql/*.sql /sql_init/
