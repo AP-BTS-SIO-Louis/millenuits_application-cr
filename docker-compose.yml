@@ -20,6 +20,9 @@ services:
     volumes:
       - web_data:/app
       - db_init:/sql_init
+    dns:
+      - 172.16.51.1
+      - 9.9.9.9
 
   # 2. Serveur Web (Éxecution du code PHP)
   web:
